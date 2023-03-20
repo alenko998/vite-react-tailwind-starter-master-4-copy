@@ -1,0 +1,51 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Online course for something else ",
+      "description": "Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!'",
+      "tags": "tags",
+      "email": "janecooper@example.com",
+      "departments": "departments",
+      "duration": "meta data",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+    },
+    {
+      "id": 2,
+      "title": "Online course for something else ",
+      "description": "Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!'",
+      "tags": "tags",
+      "email": "janecooper@example.com",
+      "departments": "departments",
+      "duration": "meta data",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+    },
+    {
+      "title": "a",
+      "description": "asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd ",
+      "tags": "html css ",
+      "departments": "a",
+      "duration": "1",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "id": 4
+    },
+    {
+      "title": "a",
+      "description": "\"Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!",
+      "tags": "a",
+      "departments": "a",
+      "duration": "a",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "id": 5
+    },
+    {
+      "title": "asddas ",
+      "description": "\"Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!",
+      "tags": "asd ",
+      "departments": "asd",
+      "duration": "sad ",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "id": 6
+    }
+  ]
+}
