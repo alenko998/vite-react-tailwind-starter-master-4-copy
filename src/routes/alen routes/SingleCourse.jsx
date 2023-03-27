@@ -9,23 +9,24 @@ import { useState } from "react";
 export default function SingleCourse() {
   const navigation = [
     {name: 'Basic info', href: 'basic-info', icon: InboxIcon, current: false},
-    {name: 'Content', href: 'content', icon: HomeIcon, current: false},
+    {name: 'Content management', href: 'content', icon: HomeIcon, current: false},
     {name: 'Pool management', href: 'pool-management', icon: UsersIcon, current: false},
-    {name: 'All courses', href: '/courses', icon: FolderIcon, current: false}
+    
   ]
+  const {id} = useParams();
 
   function headerTitle() {
     const location = useLocation();
     console.log(location.pathname);
     switch (location.pathname) {
-      case '/components/all':
-        return <span>All Components</span>;
-      case '/components/buttons':
-        return <span>Buttons</span>;
-      case '/components/forms':
-        return <span>Forms</span>;
-      case '/components/data-display':
-        return <span>Data Display</span>;
+      case `/single-course/${id}/basic-info`:
+        return navigation[0].current=true;
+      case `/single-course/${id}/content`:
+        return navigation[1].current=true;
+      case `/single-course/${id}/pool-management`:
+        return navigation[2].current=true;        
+   
+      
       default:
       // code block
     }
@@ -42,11 +43,11 @@ export default function SingleCourse() {
     imageUrl: ""
   })
 
-  const {id} = useParams();
+
 
   
   useEffect(()=>{
-    fetch('http://localhost:3000/courses/' + id)
+    fetch('http://localhost:3001/courses/' + id)
       .then(res =>{
         return res.json()
       })
@@ -57,7 +58,7 @@ export default function SingleCourse() {
   },[])
   return (
     <>
-       <AlenSideBarLayout navigation={navigation} headerTitle={headerTitle()}  content={<Outlet/>}></AlenSideBarLayout>
+       <AlenSideBarLayout navigation={navigation} headerTitle={headerTitle()}  content={<Outlet context={[course, setCourse]}/>}></AlenSideBarLayout>
       {/*<StackedLayout content={<Outlet />}></StackedLayout>*/}
       {/*<div >*/}
       {/*    <Outlet />*/}

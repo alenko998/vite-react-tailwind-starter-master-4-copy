@@ -3,15 +3,17 @@ import PrimaryButton from '../../alen components/PrimaryButton'
 import ContentTable from '../../alen components/Tables/ContentTable'
 import AlenFilterlayout from '../../alen layouts/alen_filterlayout'
 import { useEffect, useParams } from 'react'
+import { useOutletContext } from 'react-router-dom'
 
-export default function Content(props) {
+
+
+export default function Content() {
+
+  const [course,setCourse] = useOutletContext();
 
   useEffect(()=>{
-    console.log(props.course);
+    console.log(course);
   },[])
-
-
-
 
   const filters = [
     {
@@ -45,7 +47,7 @@ export default function Content(props) {
   const tableTitle = 'Course content'
   const tableSubTitle = 'A list of content of the course'
 
-  const title = "Pool management"
+  const title = "Content management"
 
   const addQuiz = "Add quiz"
 

@@ -1,123 +1,38 @@
+import { useState } from "react";
 
 export default function EditCourseForm(props) {
+    const handleSubmit = () => {
+      fetch('http://localhost:3001/courses/' + props.idForDelete,{
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          title: title,
+          description: description,
+          departments: departments,
+          courseLevel: courseLevel,
+          subtitles: subtitles
+        })
+      });
+    }
+
+    const [title,setTitle] = useState(props.course.title);
+    const [description,setDescription] = useState(props.course.description);
+    const [departments,setDepartments] = useState(props.course.departments);
+    const [courseLevel,setCourseLevel] = useState(props.course.courseLevel);
+    const [subtitles,setSubtitles] = useState(props.course.subtitles);
+    const [tags,setTags] = useState(props.course.tags);
+   
+    
+  
     return (
-      <form className="space-y-8 divide-y divide-gray-200"  >  
+      <form className="space-y-8 divide-y divide-gray-200" onSubmit={handleSubmit} >  
         <div className="space-y-8 divide-y divide-gray-200 ">
           
             <div>
               <h3 className="text-base font-semibold leading-6 text-gray-900">Basic course information</h3>
             </div>
-  
-          <div className="">
-            <div className="mt-2 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-              <div className="sm:col-span-6">
-                <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
-                  Course title
-                </label>
-                <div className="mt-2">
-                  <input
-         
-                    id="title"
-                    name="title"
-                    type="text"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-  
-              <div className="sm:col-span-3">
-                <label htmlFor="level" className="block text-sm font-medium leading-6 text-gray-900">
-                  Level
-                </label>
-                <div className="mt-2">
-                  <select
-                    
-                    id="level"
-                    name="level"
-                    autoComplete="level"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  >
-                    <option>Beginner</option>
-                    <option>Intermediate</option>
-                    <option>Expert</option>
-                    <option>All levels</option>
-                  </select>
-                </div>
-              </div>
-  
-              
-  
-              <div className="sm:col-span-3">
-                <label htmlFor="tags" className="block text-sm font-medium leading-6 text-gray-900">
-                  Tags
-                </label>
-                <div className="mt-2">
-                  <input
-                    
-                    type="text"
-                    name="tags"
-                    id="tags"
-                    autoComplete="address-level2"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-  
-              <div className="sm:col-span-3">
-                <label htmlFor="departments" className="block text-sm font-medium leading-6 text-gray-900">
-                  Departments
-                </label>
-                <div className="mt-2">
-                  <input
-                
-                    type="text"
-                    name="departments"
-                    id="departments"
-                    autoComplete="address-level1"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-  
-              <div className="sm:col-span-3">
-                <label htmlFor="duration" className="block text-sm font-medium leading-6 text-gray-900">
-                  Duration
-                </label>
-                <div className="mt-2">
-                  <input
-                   
-                    type="text"
-                    name="duration"
-                    id="duration"
-                    autoComplete="duration"
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-
-        <div className="sm:col-span-6">
-                <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">
-                  Short description of the course
-                </label>
-                <div className="mt-2">
-                  <textarea
-                   
-                    id="description"
-                    name="description"
-                    rows={3}
-                    className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6"
-                    defaultValue={''}
-                  />
-                </div>
-              </div>
-
-
-        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+            <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
            <div className="sm:col-span-6">
              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
                Course cover photo
@@ -153,6 +68,118 @@ export default function EditCourseForm(props) {
              </div>
            </div>
        </div>
+  
+          <div className="">
+            <div className="mt-2 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <div className="sm:col-span-6">
+                <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
+                  Course title
+                </label>
+                <div className="mt-2">
+                  <input
+                    value={title}
+                    onChange={(e)=>setTitle(e.target.value)}
+                    id="title"
+                    name="title"
+                    type="text"
+                    autoComplete="email"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+  
+              <div className="sm:col-span-3">
+                <label htmlFor="subtitles" className="block text-sm font-medium leading-6 text-gray-900">
+                  Subtitles
+                </label>
+                <div className="mt-2">
+                  <input
+                    value={subtitles}
+                    onChange={(e)=>setSubtitles(e.target.value)}
+                    type="text"
+                    name="subtitles"
+                    id="subtitles"
+                    autoComplete="address-level2"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              
+  
+              <div className="sm:col-span-3">
+                <label htmlFor="tags" className="block text-sm font-medium leading-6 text-gray-900">
+                  Tags
+                </label>
+                <div className="mt-2">
+                  <input
+                    value={tags}
+                    onChange={(e)=>setTags(e.target.value)}
+                    type="text"
+                    name="tags"
+                    id="tags"
+                    autoComplete="address-level2"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+  
+              <div className="sm:col-span-3">
+                <label htmlFor="departments" className="block text-sm font-medium leading-6 text-gray-900">
+                  Departments
+                </label>
+                <div className="mt-2">
+                  <input
+                    value={departments}
+                    onChange={(e)=>setDepartments(e.target.value)}
+                    type="text"
+                    name="departments"
+                    id="departments"
+                    autoComplete="address-level1"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+  
+              <div className="sm:col-span-3">
+                <label htmlFor="duration" className="block text-sm font-medium leading-6 text-gray-900">
+                  Level
+                </label>
+                <div className="mt-2">
+                  <input
+                     value={courseLevel}
+                     onChange={(e)=>setCourseLevel(e.target.value)}
+                    type="text"
+                    name="duration"
+                    id="duration"
+                    autoComplete="duration"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="sm:col-span-6">
+                <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">
+                  Short description of the course
+                </label>
+                <div className="mt-2">
+                  <textarea
+                    value={description}
+                    onChange={(e)=>setDescription(e.target.value)}
+                    id="description"
+                    name="description"
+                    rows={3}
+                    className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6"
+                    defaultValue={''}
+                  />
+                </div>
+              </div>
+
+
+       
 
   
         <div className=" flex pt-5 justify-center">

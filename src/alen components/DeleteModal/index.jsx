@@ -10,7 +10,7 @@ export default function DeleteModal(props) {
   const navigate = useNavigate();
 
   const handleDelete = (id) =>{
-    fetch('http://localhost:3000/courses/' + id, {method:'DELETE'});
+    fetch('http://localhost:3001/courses/' + id, {method:'DELETE'});
     navigate('/message-page')
   }
 

@@ -1,40 +1,22 @@
 import { useState } from "react";
+import QuestionOptionsTable from "../alen components/Tables/QuestionOptionsTable";
+import QuestionOptionsTableAdd from "../alen components/Tables/QuestionOptionsTableAdd";
 
-export default function AddCourseForm(props) {
-    const [title,setTitle] = useState('');
-    const [subtitles,setSubtitles] = useState('');
-    const [tags,setTags] = useState('');
-    const [arrayTags,setArrayTags] = useState([])
-    const [departments,setDepartments] = useState('');
-    const [courseLevel,setCourseLevel] = useState('');
-    const [description,setDescription] = useState('');
-    const imageUrl = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60";
-    const handleSubmit = async (e) => {
-   
-    
-      let array = tags.split(',')
-      array = tags.split(',')
-      setArrayTags(array);
 
-      const course = {title, description, departments, tags:arrayTags, courseLevel, subtitles, imageUrl};
-      fetch('http://localhost:3001/courses/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(course)
-      }).then((res) => {
-        console.log(res)
-      })
-    }
+export default function AddQuestionForm(props) {
+
+     
+  
       return (
-        <form className="space-y-8 divide-y divide-gray-200" onSubmit={handleSubmit} >  
+        <form className="space-y-8 divide-y divide-gray-200" >  
           <div className="space-y-8 divide-y divide-gray-200 ">
             
               <div>
-                <h3 className="text-base font-semibold leading-6 text-gray-900">Basic course information</h3>
+                <h3 className="text-base font-semibold leading-6 text-gray-900">Add a new question</h3>
               </div>
 
 
-          <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+          {/* <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
              <div className="sm:col-span-6">
                <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
                  Course cover photo
@@ -69,38 +51,37 @@ export default function AddCourseForm(props) {
                  </div>
                </div>
              </div>
-         </div>
+         </div> */}
   
     
             <div className="">
+
               <div className="mt-2 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                 <div className="sm:col-span-6">
-                  <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
-                    Course title
+                  <label htmlFor="questionTitle" className="block text-sm font-medium leading-6 text-gray-900">
+                    Question title
                   </label>
                   <div className="mt-2">
                     <input
-                    onChange={(e)=>{setTitle(e.target.value)}}
-                      id="title"
-                      name="title"
+                      id="questionTitle"
+                      name="questionTitle"
                       type="text"
-                      autoComplete="email"
+                      autoComplete="questionTitle"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
     
                 <div className="sm:col-span-3">
-                <label htmlFor="subtitles" className="block text-sm font-medium leading-6 text-gray-900">
-                  Subtitles
+                <label htmlFor="lesson" className="block text-sm font-medium leading-6 text-gray-900">
+                  Lesson
                 </label>
                 <div className="mt-2">
                   <input
-                    onChange={(e)=>setSubtitles(e.target.value)}
                     type="text"
-                    name="subtitles"
-                    id="subtitles"
-                    autoComplete="address-level2"
+                    name="lesson"
+                    id="lesson"
+                    autoComplete="lesson"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -110,75 +91,56 @@ export default function AddCourseForm(props) {
                 
     
                 <div className="sm:col-span-3">
-                  <label htmlFor="tags" className="block text-sm font-medium leading-6 text-gray-900">
-                    Tags
+                  <label htmlFor="difficulty" className="block text-sm font-medium leading-6 text-gray-900">
+                    Difficulty
                   </label>
                   <div className="mt-2">
                     <input
-                      onChange={(e)=>{setTags(e.target.value)}}
                       type="text"
-                      name="tags"
-                      id="tags"
-                      autoComplete="address-level2"
+                      name="difficulty"
+                      id="difficulty"
+                      autoComplete="difficulty"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
     
-                <div className="sm:col-span-3">
-                  <label htmlFor="departments" className="block text-sm font-medium leading-6 text-gray-900">
-                    Departments
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      onChange={(e)=>{setDepartments(e.target.value)}}
-                      type="text"
-                      name="departments"
-                      id="departments"
-                      autoComplete="address-level1"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
+             
     
-                <div className="sm:col-span-3">
-                  <label htmlFor="duration" className="block text-sm font-medium leading-6 text-gray-900">
-                    Level
-                  </label>
-                  <div className="mt-2">
-                    <input
-                      value={props.id}
-                      onChange={(e)=>{setCourseLevel(e.target.value)}}
-                      type="text"
-                      name="duration"
-                      id="duration"
-                      autoComplete="duration"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
+          
               </div>
             </div>
           </div>
   
   
-          <div className="sm:col-span-6">
-                  <label htmlFor="description" className="block text-sm font-medium leading-6 text-gray-900">
-                    Short description of the course
+         
+                <div className="flex flex-col sm:col-span-6 ">
+
+                 
+                  <div className="flex flex-col justify-center">
+                  <label htmlFor="addAnswer" className="block text-sm font-medium leading-6 text-gray-900 mt-2">
+                    Add answer
                   </label>
-                  <div className="mt-2">
-                    <textarea
-                      onChange={(e)=>{setDescription(e.target.value)}}
-                      id="description"
-                      name="description"
-                      rows={3}
-                      className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6"
-                      defaultValue={''}
+                  <div className="flex  mt-2">
+                    <input
+                      id="addAnswer"
+                      name="addAnswer"
+                      type="text"
+                      autoComplete="addAnswer"
+                      className="block w-11/12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
+                    <button  className="ml-3 inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"> 
+                        Add
+                    </button>
+                  </div>
+                  
+                  <QuestionOptionsTableAdd/>
+
                   </div>
                 </div>
+             
   
-  
+               
     
           <div className=" flex pt-5 justify-center">
             <div className="flex justify-end">

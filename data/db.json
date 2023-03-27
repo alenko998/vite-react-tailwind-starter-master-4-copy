@@ -1,50 +1,294 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Online course for something else ",
-      "description": "Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!'",
-      "tags": "tags",
-      "email": "janecooper@example.com",
-      "departments": "departments",
-      "duration": "meta data",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+      "title": "Web Design for Web Developers: Build Beautiful Websites!",
+      "description": "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included! hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!",
+      "tags": [],
+      "departments": "asdasasd ",
+      "courseLevel": "intermediate",
+      "subtitles": "francais",
+      "imageUrl": "https://www.aihr.com/wp-content/uploads/learning-vs-training-cover.png",
+      "questions": [
+        {
+          "questionId": 1,
+          "questionTitle": "prvo pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "easy",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "prvi netacan",
+              "true_or_false": false
+            },
+            {
+              "answer": "prvi tacan",
+              "true_or_false": true
+            },
+            {
+              "answer": "prvi tacan",
+              "true_or_false": true
+            }
+          ]
+        },
+        {
+          "questionId": 2,
+          "questionTitle": "drugo pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "hard",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "drugo pitanje ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor drugi",
+              "true_or_false": true
+            }
+          ]
+        },
+        {
+          "questionId": 3,
+          "questionTitle": "trece pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "medium",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": true
+            },
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": true
+            }
+          ]
+        }
+      ],
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Online course for something else ",
-      "description": "Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!'",
-      "tags": "tags",
-      "email": "janecooper@example.com",
-      "departments": "departments",
-      "duration": "meta data",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+      "title": "Random title of the course",
+      "description": "Learn to set boundaries, protect yourself from energy drains, grounding, engage self-care, balance and energy work Q&A desc",
+      "tags": [
+        "prvi",
+        "drugi",
+        "treci"
+      ],
+      "departments": "dep",
+      "courseLevel": "expert",
+      "subtitles": "espanol",
+      "imageUrl": "https://www.trainerslibrary.org/wp-content/uploads/2020/03/Transfer-of-Learning-Types-and-Theories-780x405.jpg",
+      "questions": [
+        {
+          "questionId": 4,
+          "questionTitle": "drugi kurs pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "medium",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        },
+        {
+          "questionId": 5,
+          "questionTitle": "kurs dva pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "hard",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        },
+        {
+          "questionId": 6,
+          "questionTitle": "kurs pitanje",
+          "lesson": "lekcija iz baze",
+          "difficulty": "easy",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        }
+      ],
+      "id": 2
     },
     {
-      "title": "a",
-      "description": "asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd asdas dasd asd asd ",
-      "tags": "html css ",
+      "title": "Git: Become an Expert in Git & GitHub in 4 Hours",
+      "description": "Become an Expert in Git & GitHub by writing commands, learning theory, and taking quizzes. Learn Git today in 4 hours!",
+      "tags": [
+        "prvi",
+        "drugi",
+        "treci"
+      ],
       "departments": "a",
-      "duration": "1",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "courseLevel": "beginner",
+      "subtitles": "english",
+      "imageUrl": "https://learningfactor.com.au/wp-content/uploads/2018/10/brain-map.jpg",
+      "questions": [
+        {
+          "questionId": 7,
+          "questionTitle": "naslov lekcije iz baze tri",
+          "lesson": "lekcija iz baze",
+          "difficulty": "medium",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        }
+      ],
+      "id": 3
+    },
+    {
+      "title": "Web Design for Web Developers: Build Beautiful Websites!",
+      "description": "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included! hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!",
+      "tags": [
+        "prvi",
+        "drugi",
+        "treci"
+      ],
+      "departments": "asdasasd ",
+      "courseLevel": "intermediate",
+      "subtitles": "english",
+      "imageUrl": "https://assets.weforum.org/article/image/responsive_big_webp_JMF96ETfn1kSViVnUou1Z0XIDwWcPpT5mrPc7-ytpAc.webp",
+      "questions": [
+        {
+          "questionId": 8,
+          "questionTitle": "naslov lekcije iz baze cetiri",
+          "lesson": "lekcija iz baze",
+          "difficulty": "hard",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        },
+        {
+          "questionId": 20,
+          "questionTitle": "novo pitanje",
+          "lesson": "lekcija sad dodana",
+          "difficulty": "easy",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            },
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": false
+            }
+          ]
+        }
+      ],
       "id": 4
     },
     {
-      "title": "a",
-      "description": "\"Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!",
-      "tags": "a",
-      "departments": "a",
-      "duration": "a",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "title": "Random title of the course",
+      "description": "Learn to set boundaries, protect yourself from energy drains, grounding, engage self-care, balance and energy work Q&A desc",
+      "tags": [
+        "prvi",
+        "drugi",
+        "treci"
+      ],
+      "departments": "dep",
+      "courseLevel": "expert",
+      "subtitles": "francais",
+      "imageUrl": "https://cdnsm5-ss4.sharpschool.com/UserFiles/Servers/Server_64838/Image/SouthBelt/learn.jpg",
+      "questions": [
+        {
+          "questionId": 9,
+          "questionTitle": "naslov lekcije iz baze pet",
+          "lesson": "lekcija iz baze",
+          "difficulty": "medium",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        }
+      ],
       "id": 5
     },
     {
-      "title": "asddas ",
-      "description": "\"Learn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simarn web design in 1 hour with 25+ simple-to-use rules and guidelines, tons of amazing web design resources included!",
-      "tags": "asd ",
-      "departments": "asd",
-      "duration": "sad ",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      "title": "Git: Become an Expert in Git & GitHub in 4 Hours",
+      "description": "Become an Expert in Git & GitHub by writing commands, learning theory, and taking quizzes. Learn Git today in 4 hours!",
+      "tags": [
+        "prvi",
+        "drugi",
+        "treci"
+      ],
+      "departments": "a",
+      "courseLevel": "beginner",
+      "subtitles": "espanol",
+      "imageUrl": "https://www.goabroad.com/section_cloudinary/gaplabs/image/upload/images2/program_content/10-ideas-on-the-best-way-to-learn-a-new-language-2-1487670017.jpg",
+      "questions": [
+        {
+          "questionId": 10,
+          "questionTitle": "naslov lekcije iz baze sest",
+          "lesson": "lekcija iz baze",
+          "difficulty": "easy",
+          "type": "type iz baze",
+          "questionsOptions": [
+            {
+              "answer": "neki ponudjeni odgovor",
+              "true_or_false": false
+            },
+            {
+              "answer": "neki ponudjeni tacan odgovor",
+              "true_or_false": true
+            }
+          ]
+        }
+      ],
       "id": 6
     }
   ]
